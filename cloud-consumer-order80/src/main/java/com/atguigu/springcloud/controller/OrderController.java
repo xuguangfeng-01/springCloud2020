@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @Slf4j
@@ -27,5 +28,10 @@ public class OrderController {
     @GetMapping(value = "/consumer/payment/getPaymentById/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id")Long id){
         return restTemplate.getForObject(PAYMENT_URL+"payment/getPaymentById/"+id,CommonResult.class);
+    }
+
+    @GetMapping(value = "/consumer/payment/getPaymentList")
+    public CommonResult<List<Payment>> getPaymentList(){
+        return restTemplate.getForObject(PAYMENT_URL+"payment/getPaymentList",CommonResult.class);
     }
 }
