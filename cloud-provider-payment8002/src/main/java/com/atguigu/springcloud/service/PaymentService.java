@@ -8,23 +8,23 @@ import java.util.List;
 public interface PaymentService {
 
     /**
-    * @Description: 新增
-    * @author:      xuguangfeng
-    * @date:        2020/8/25 13:47
-    */
+     * @Description: 新增
+     * @author: xuguangfeng
+     * @date: 2020/8/25 13:47
+     */
     public int create(Payment payment);
 
     /**
-    * @Description: 查询
-    * @author:      xuguangfeng
-    * @date:        2020/8/25 13:47
-    */
+     * @Description: 查询
+     * @author: xuguangfeng
+     * @date: 2020/8/25 13:47
+     */
     public Payment getPaymentById(@Param("id") Long id);
 
     /**
-    * @Description: 列表查询
-    * @author:      xuguangfeng
-    * @date:        2020/8/26 9:05
-    */
+     * @Description: 列表查询
+     * @author: xuguangfeng
+     * @date: 2020/8/26 9:05
+     */
     public List<Payment> getPaymentList();
 }
